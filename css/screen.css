@@ -657,6 +657,15 @@ a:focus {
     pointer-events: auto;
 }
 
+.c-page{
+    transform: translateX(0%);
+    transition: transform .25s ease;
+}
+
+.has-mobile-nav .c-page{
+    transform: translateX(25%);
+}
+
 .c-mobile-nav__header {
     display: flex;
     align-items: center;
@@ -665,9 +674,18 @@ a:focus {
 }
 
 .c-mobile-nav__bg {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #202024;
+    transition: opacity .25s ease;
 }
 
 .has-mobile-nav .c-mobile-nav__bg {
+    opacity: 0.5;
 }
 
 .c-mobile-nav__body {
