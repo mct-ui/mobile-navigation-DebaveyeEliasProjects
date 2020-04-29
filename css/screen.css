@@ -189,8 +189,9 @@ a:focus {
 \*------------------------------------*/
 
 
-.c-mobile-nav {
-    display: none;
+
+
+.c-mobile-nav__body {
     position: fixed;
     top:0;
     right: 0;
@@ -200,14 +201,34 @@ a:focus {
     pointer-events: auto;
     transition: transform .25s ease;
 }
-.has-mobile-nav .c-mobile-nav{
 
-    display: block;
-    transform: translateX(0);
+.has-mobile-nav__body .c-mobile-nav{
+    transform: translateX(0%);
     pointer-events: none;
-
+    transition: transform .25s ease;    
+}
+.c-mobile-nav__body{
+    background-color: #fff;
+    padding: 24px;
+    height: 100vh;
 }
 
+
+.c-mobile-nav__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  #202024;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+.has-mobile-nav .c-mobile-nav__bg{
+    opacity: 0.6;
+    
+    
+}
 
 /*
     Objects: Row
